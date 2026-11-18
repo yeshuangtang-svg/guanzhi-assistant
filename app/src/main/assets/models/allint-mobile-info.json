@@ -1,0 +1,36 @@
+{
+  "source_archive": {
+    "filename": "复赛冻结视觉曾SFT2273步-22.6-视觉AWQ-文本GPTQ-W4W8-G64..zip",
+    "sha256": "40c7a76a9c4c595ef22738382ecf0d7a038b637e81e8d509f692eb19a7f048de",
+    "bytes": 927948959
+  },
+  "format": "GGUF Q4_0/Q8_0 mobile adaptation of ALLINT W4/W8 G64",
+  "native_matrices": 237,
+  "matrix_fallbacks": [
+    {
+      "source": "model.language_model.layers.0.linear_attn.in_proj_qkv.weight",
+      "target": "blk.0.attn_qkv.weight",
+      "storage": "BF16",
+      "fallback_from_allint": true,
+      "matrix_fallback": "FP16 block scale cannot represent all original scales; retain BF16 matrix"
+    }
+  ],
+  "integer_codes_preserved_in_native_matrices": true,
+  "group_mapping": "G64 split into two G32 blocks with the same scale",
+  "scale_dtype": "FP16 (GGUF requirement)",
+  "not_bit_exact_to_bf16_compatibility": true,
+  "scale_relative_error_max": 0.0,
+  "relative_l2_vs_compatibility_max": 0.0017087273434816083,
+  "files": [
+    {
+      "name": "model-allint-w4w8.gguf",
+      "size": 933766240,
+      "sha256": "94f6b38b3462add69b1e4b38b31e609e157997246409c92b08c480641bcc0bbf"
+    },
+    {
+      "name": "vision-allint-q8.gguf",
+      "size": 115923168,
+      "sha256": "c55789b46431073b4ccd87d22cfbd0ef85a54cfaadad066e2084dc6e1c4646aa"
+    }
+  ]
+}

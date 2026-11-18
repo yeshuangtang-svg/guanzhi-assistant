@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#7a9e8b"/></marker></defs>
+<rect width="1200" height="410" rx="24" fill="#f2f7f4"/>
+<g font-family="Microsoft YaHei,system-ui,sans-serif"><text x="44" y="49" font-size="24" fill="#214c3b" font-weight="600">模型负责理解与生成，应用负责资料获取与展示</text>
+<text x="44" y="91" font-size="16" fill="#607c6e">基础问答 · 在手机本地完成</text>
+<g fill="white" stroke="#d8e6dc"><rect x="44" y="111" width="310" height="70" rx="16"/><rect x="445" y="111" width="310" height="70" rx="16"/><rect x="846" y="111" width="310" height="70" rx="16"/></g>
+<g font-size="22" fill="#254c3c" text-anchor="middle"><text x="199" y="154">输入文字 / 图片</text><text x="600" y="154">CPU · 量化多模态模型</text><text x="1001" y="154">流式回答与公式渲染</text></g>
+<g stroke="#7a9e8b" stroke-width="2" marker-end="url(#arrow)"><path d="M369 146 H429"/><path d="M770 146 H830"/></g>
+<text x="44" y="236" font-size="16" fill="#607c6e">按需联网 · 用户打开“联网”时</text>
+<g fill="#e0eee5"><rect x="44" y="256" width="310" height="70" rx="16"/><rect x="445" y="256" width="310" height="70" rx="16"/><rect x="846" y="256" width="310" height="70" rx="16"/></g>
+<g font-size="21" fill="#254c3c" text-anchor="middle"><text x="199" y="299">本地模型提炼检索词</text><text x="600" y="299">应用获取公开网页</text><text x="1001" y="299">本地模型结合资料总结</text></g>
+<g stroke="#7a9e8b" stroke-width="2" marker-end="url(#arrow)"><path d="M369 291 H429"/><path d="M770 291 H830"/></g>
+<text x="44" y="374" font-size="16" fill="#607c6e">最多 3 条网页来源 · 展示来源链接 · 不依赖云端模型 API</text></g></svg>

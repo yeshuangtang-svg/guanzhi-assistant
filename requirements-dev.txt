@@ -1,0 +1,4 @@
+# Optional rendering validation and LAN update QR generation.
+playwright>=1.49,<2
+qrcode[pil]>=8,<9
+Markdown>=3.7,<4

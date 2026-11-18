@@ -1,0 +1,95 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>观知助手界面设计预览</title><style>:root{color-scheme:light}body{margin:0;background:#f4f7f5}button{cursor:pointer}</style><body><div id="guanzhi-local-web" class="viz-dotted-background">
+<style>
+#guanzhi-local-web {padding:20px 0;}
+#guanzhi-local-web .gz-phone {--gz-bg:light-dark(#f7faf8,#18241f);--gz-paper:light-dark(#ffffff,#22322a);--gz-ink:light-dark(#243b34,#e1ece6);--gz-muted:light-dark(#78877f,#a7b9ae);--gz-green:light-dark(#236b58,#8ac5ad);--gz-line:light-dark(#e0e8e2,#3c5346);--gz-soft:light-dark(#e8f0ea,#304c3c);width:min(390px,100%);box-sizing:border-box;margin:auto;background:var(--gz-bg);color:var(--gz-ink);font-family:system-ui,'Microsoft YaHei',sans-serif;border:1px solid var(--gz-line);border-radius:28px;padding:12px 20px 18px;}
+#guanzhi-local-web .gz-phone * {box-sizing:border-box;}
+#guanzhi-local-web .gz-phone button {font:inherit;color:inherit;background:transparent;border:0;min-height:44px;padding:8px;border-radius:12px;}
+#guanzhi-local-web .gz-head {display:flex;align-items:center;gap:8px;}
+#guanzhi-local-web .gz-head strong {flex:1;text-align:center;font-size:19px;}
+#guanzhi-local-web .gz-icon {width:44px;font-size:24px!important;flex-shrink:0;}
+#guanzhi-local-web .gz-status {text-align:center;font-size:11px;color:var(--gz-green);padding:2px 0 24px;}
+#guanzhi-local-web .gz-main {min-height:435px;}
+#guanzhi-local-web .gz-intro {padding:12px 4px 0;}
+#guanzhi-local-web .gz-eyebrow {font-size:12px;color:var(--gz-green);}
+#guanzhi-local-web h2 {font-size:26px;font-weight:650;margin:14px 0 10px;line-height:1.4;}
+#guanzhi-local-web p {font-size:13px;line-height:1.8;margin:0;color:var(--gz-muted);}
+#guanzhi-local-web .gz-grid {display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0 22px;}
+#guanzhi-local-web .gz-phone .gz-tile {text-align:left;background:var(--gz-paper);border:1px solid var(--gz-line);border-radius:18px;padding:16px 12px;}
+#guanzhi-local-web .gz-tile b {display:block;font-size:15px;margin-bottom:8px;}
+#guanzhi-local-web .gz-tile small {font-size:11px;color:var(--gz-muted);}
+#guanzhi-local-web .gz-heading {display:flex;align-items:center;justify-content:space-between;font-size:14px;font-weight:600;}
+#guanzhi-local-web .gz-phone .gz-link {display:block;width:100%;text-align:left;padding:12px 0;font-size:14px;color:var(--gz-muted);}
+#guanzhi-local-web .gz-compose {border:1px solid var(--gz-line);background:var(--gz-paper);border-radius:24px;padding:10px 10px 8px 14px;margin-top:22px;}
+#guanzhi-local-web textarea {width:100%;resize:none;border:0;background:transparent;color:var(--gz-ink);font:16px/1.6 system-ui;min-height:46px;padding:7px 0;}
+#guanzhi-local-web textarea::placeholder {color:var(--gz-muted);}
+#guanzhi-local-web .gz-actions {display:flex;gap:2px;align-items:center;}
+#guanzhi-local-web .gz-actions button {font-size:12px;padding:7px;white-space:nowrap;}
+#guanzhi-local-web .gz-phone .gz-send {margin-left:auto;width:44px;font-size:22px;background:var(--gz-green);color:var(--gz-bg);}
+#guanzhi-local-web .gz-phone .gz-on {background:var(--gz-green);color:var(--gz-bg);}
+#guanzhi-local-web .gz-foot {font-size:10px;text-align:center;color:var(--gz-muted);padding-top:12px;}
+#guanzhi-local-web .gz-user {background:var(--gz-soft);border-radius:20px;padding:14px 16px;margin:18px 0 26px 38px;font-size:16px;line-height:1.8;overflow-wrap:anywhere;}
+#guanzhi-local-web .gz-identity {color:var(--gz-muted);font-size:12px;display:flex;align-items:center;gap:9px;}
+#guanzhi-local-web .gz-mark {background:var(--gz-green);color:var(--gz-bg);border-radius:7px;padding:4px;}
+#guanzhi-local-web .gz-answer {font-size:16px;line-height:1.9;padding:15px 0;white-space:pre-wrap;}
+#guanzhi-local-web .gz-search {width:100%;background:var(--gz-paper);border:1px solid var(--gz-line);border-radius:18px;padding:14px;font:15px system-ui;color:var(--gz-ink);margin:5px 0 12px;}
+#guanzhi-local-web .gz-tabs {display:flex;gap:6px;margin-bottom:14px;}
+#guanzhi-local-web .gz-tabs button {flex:1;font-size:13px;background:var(--gz-soft);border-radius:20px;}
+#guanzhi-local-web .gz-date {font-size:12px;color:var(--gz-muted);margin:18px 0 8px;}
+#guanzhi-local-web .gz-history {display:flex;align-items:center;gap:12px;background:var(--gz-paper);border:1px solid var(--gz-line);border-radius:20px;padding:16px 10px 16px 12px;margin-bottom:10px;}
+#guanzhi-local-web .gz-type {padding:12px;background:var(--gz-soft);border-radius:12px;color:var(--gz-green);font-size:14px;}
+#guanzhi-local-web .gz-summary {min-width:0;flex:1;text-align:left;}
+#guanzhi-local-web .gz-summary b {font-size:15px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#guanzhi-local-web .gz-summary p {font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#guanzhi-local-web .gz-summary small {font-size:11px;color:var(--gz-muted);}
+#guanzhi-local-web .gz-example {padding:17px;background:var(--gz-paper);border:1px solid var(--gz-line);border-radius:20px;margin:12px 0;}
+#guanzhi-local-web .gz-example b {font-size:16px;}
+#guanzhi-local-web .gz-example p {margin:10px 0;}
+#guanzhi-local-web .gz-empty {text-align:center;color:var(--gz-muted);padding:65px 0;line-height:2;}
+#guanzhi-local-web .gz-preview-label {font:11px system-ui;color:var(--gz-muted);text-align:center;padding-bottom:12px;}
+</style>
+<section class="gz-phone" aria-label="观知助手新版界面预览">
+<div class="gz-preview-label">交互设计预览 · 非手机实机</div>
+<header class="gz-head"><button class="gz-icon cursor-interaction" data-go="history" aria-label="打开对话记录">☰</button><strong id="gz-title">观知</strong><button class="gz-icon cursor-interaction" data-go="home" aria-label="新建对话">＋</button></header>
+<div class="gz-status" id="gz-status">本地运行 · CPU</div>
+<main class="gz-main" id="gz-content"></main>
+<div class="gz-compose" id="gz-compose"><textarea id="gz-input" rows="1" aria-label="输入问题" placeholder="写下问题，或添加一张图片"></textarea><div class="gz-actions"><button data-attach class="cursor-interaction">拍照</button><button data-attach class="cursor-interaction">相册</button><button data-go="tasks" class="cursor-interaction">任务</button><button id="gz-web" class="cursor-interaction" aria-pressed="false">联网</button><button id="gz-send" class="gz-send cursor-interaction" aria-label="发送问题">↑</button></div></div>
+<div class="gz-foot" id="gz-foot">本地模型推理 · 可按需开启联网搜索</div>
+</section>
+<script>
+(()=>{
+ const root=document.getElementById('guanzhi-local-web'),content=root.querySelector('#gz-content'),input=root.querySelector('#gz-input');
+ const saved={};let screen=saved.screen||'home',web=!!saved.web,filter='全部',task=saved.task||'数值计算',question='';
+ const examples={'数值计算':[['账单合计','三笔金额分别为 12.50 元、8.30 元、19.20 元，优惠 5 元。请逐步计算实付总额。'],['表格汇总','甲组 18、25、32，乙组 16、29、30，丙组 20、24、31。分别求和并比较。'],['拍票据核算','请从票据图片识别各项金额、折扣与合计，并自行复核。']], '空间推理':[['正方体相对面','展开图坐标：A(1,2)、B(2,1)、C(2,2)、D(2,3)、E(3,2)、F(4,2)。折成立方体后哪些面相对？'],['展开图选项','请分析图片中的展开图，判断哪个立方体选项能够折成。'],['折叠方向','请根据图片标记说明相邻面及折叠后的朝向。']], '文字提取':[['提取指定段落','请识别文档图片中指定段落，保留换行。'],['识别模糊字幕','请提取截图中的字幕，无法确认的字符标为不确定。'],['车牌文字','请提取图片中的车牌文字，模糊字符不要猜测。']]};
+ const histories=[{title:'核算今天的购物账单',preview:'三笔金额与优惠，应如何计算？',kind:'聊',pinned:true},{title:'解读正方体展开图',preview:'判断相对面与折叠方向',kind:'图',pinned:false},{title:'本地模型怎么搜索网页',preview:'检索词 → 获取网页 → 本地总结',kind:'聊',pinned:false}];
+ function persist(){}
+ function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+ function render(){
+  root.querySelector('#gz-title').textContent=screen==='history'?'对话记录':screen==='tasks'?'任务与实例':screen==='examples'?task:'观知';
+  const back=root.querySelector('.gz-head button');back.textContent=['home','chat'].includes(screen)?'☰':'‹';back.dataset.go=['home','chat'].includes(screen)?'history':'home';back.setAttribute('aria-label',['home','chat'].includes(screen)?'打开对话记录':'返回主页');root.querySelector('#gz-status').hidden=!['home','chat'].includes(screen);
+  root.querySelector('#gz-compose').hidden=!['home','chat'].includes(screen);
+  root.querySelector('#gz-web').classList.toggle('gz-on',web);root.querySelector('#gz-web').textContent=web?'联网 ✓':'联网';root.querySelector('#gz-web').setAttribute('aria-pressed',String(web));root.querySelector('#gz-foot').textContent=web?'本地模型规划与总结 · 无需 API Key':'本地模型推理 · 可按需开启联网搜索';
+  if(screen==='home')content.innerHTML='<div class="gz-intro"><div class="gz-eyebrow">你的本地多模态助手</div><h2>今天，想弄懂什么？</h2><p>一张图，一个问题。<br>由微调后的 Qwen3.5-0.8B 在手机上分析。</p><div class="gz-grid">'+[['读图计算','账单 · 表格 · 数值','数值计算'],['看图解题','空间 · 逻辑 · 专业题','空间推理'],['识别提取','文字 · 细节 · 代码','文字提取'],['趣味联想','成语 · 画面隐喻','趣味联想']].map(e=>'<button class="gz-tile cursor-interaction" data-task="'+e[2]+'"><b>'+e[0]+' ↗</b><small>'+e[1]+'</small></button>').join('')+'</div><div class="gz-heading">从一个实例开始<button data-go="tasks" class="cursor-interaction">更多实例</button></div><button class="gz-link cursor-interaction" data-example="0">三笔金额与一张优惠券　↗</button><button class="gz-link cursor-interaction" data-search-example>让本地模型查网页并总结　↗</button></div>';
+  else if(screen==='history'){content.innerHTML='<input class="gz-search" id="gz-query" aria-label="搜索对话" placeholder="搜索你聊过的问题"><div class="gz-tabs">'+['全部','已置顶','回收站'].map(v=>'<button class="cursor-interaction '+(filter===v?'gz-on':'')+'" data-filter="'+v+'">'+v+'</button>').join('')+'</div><div id="gz-records"></div>';records('');}
+  else if(screen==='tasks')content.innerHTML='<div class="gz-heading">每个问题，都交给模型</div><p>11 类任务，每类 3 个实例。下方展示部分入口。</p>'+['数值计算','空间推理','文字提取'].map(t=>'<button class="gz-link cursor-interaction" data-task="'+t+'">'+t+'　3 个实例　›</button>').join('')+'<button class="gz-link cursor-interaction" data-go="home">‹ 返回主页</button>';
+  else if(screen==='examples'){const list=examples[task]||[['看图猜成语','请根据图片中的元素和关系推断成语。'],['画面隐喻','这张图片表达了什么隐喻？说明视觉依据。'],['文字与图案联想','请综合图片与文字，解释它们共同表达的意思。']];content.innerHTML='<p>选择实例填入问题；图片题需在 App 中添加图片。</p>'+list.map((e,i)=>'<div class="gz-example"><b>'+e[0]+'</b><p>'+e[1]+'</p><button class="cursor-interaction" data-example="'+i+'">试用这个实例 ↗</button></div>').join('')+'<button data-go="tasks" class="cursor-interaction">‹ 返回任务</button>';}
+  else content.innerHTML='<div class="gz-user">'+esc(question||'请分析这道题，并给出推理过程。')+'</div><div class="gz-identity"><span class="gz-mark">观</span>观知 · 本地模型</div><div class="gz-answer">'+(web?'本地生成检索词 → 获取公开网页 → 本地阅读并总结。\n\n实际 App 会展示检索状态和来源链接，无需填写 API Key。':'数值计算、图片识字和空间分析，都交给手机里的微调量化模型推理。')+'</div><p>这是界面演示，不运行模型，也不伪造回答。请在 APK 中体验实际生成。</p><div class="gz-actions"><button data-go="home" class="cursor-interaction">返回主页</button><button data-go="history" class="cursor-interaction">对话记录</button></div>';
+ }
+ function records(q){const list=filter==='回收站'?[]:histories.filter(h=>(filter!=='已置顶'||h.pinned)&&(h.title+h.preview).includes(q));root.querySelector('#gz-records').innerHTML=list.length?'<div class="gz-date">演示记录 · 今天</div>'+list.map(h=>'<div class="gz-history"><div class="gz-type">'+h.kind+'</div><button class="gz-summary cursor-interaction" data-history="'+h.title+'"><b>'+h.title+'</b><p>'+h.preview+'</p><small>'+(h.pinned?'已置顶 · ':'')+'演示</small></button><button class="cursor-interaction" data-pin="'+h.title+'" aria-label="切换置顶">⋯</button></div>').join(''):'<div class="gz-empty">'+(filter==='回收站'?'回收站为空<br>删除的对话可在这里恢复':'没有找到相关对话<br>换个关键词试试')+'</div>';}
+ root.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.go){screen=b.dataset.go;render();}
+  else if(b.dataset.task){task=b.dataset.task;screen='examples';render();}
+  else if(b.dataset.example!==undefined){const t=screen==='home'?'数值计算':task;question=(examples[t]||[['看图猜成语','请根据图片中的元素和关系推断成语。'],['画面隐喻','这张图片表达了什么隐喻？'],['文字与图案联想','请解释图片与文字共同表达的意思。']])[Number(b.dataset.example)][1];screen='home';render();input.value=question;}
+  else if(b.hasAttribute('data-search-example')){web=true;input.value='搜索 Qwen3.5-0.8B 的官方说明并总结。';render();}
+  else if(b.id==='gz-web'){web=!web;render();}
+  else if(b.id==='gz-send'){question=input.value.trim();if(!question){input.focus();return;}screen='chat';input.value='';render();}
+  else if(b.dataset.filter){filter=b.dataset.filter;render();}
+  else if(b.dataset.history){question=b.dataset.history;screen='chat';render();}
+  else if(b.dataset.pin){const h=histories.find(x=>x.title===b.dataset.pin);h.pinned=!h.pinned;records(root.querySelector('#gz-query').value);}
+  else if(b.hasAttribute('data-attach'))root.querySelector('#gz-status').textContent='请在 APK 中使用拍照与相册';
+  persist();
+ });
+ root.addEventListener('input',e=>{if(e.target.id==='gz-query')records(e.target.value);});
+ render();
+})();
+</script>
+</div></body></html>

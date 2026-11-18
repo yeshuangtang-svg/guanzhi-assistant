@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "files": [
+    {
+      "name": "model-allint-w4w8.gguf",
+      "size": 933766240,
+      "sha256": "94f6b38b3462add69b1e4b38b31e609e157997246409c92b08c480641bcc0bbf"
+    },
+    {
+      "name": "vision-allint-q8.gguf",
+      "size": 115923168,
+      "sha256": "c55789b46431073b4ccd87d22cfbd0ef85a54cfaadad066e2084dc6e1c4646aa"
+    }
+  ],
+  "models": [
+    {
+      "id": "allint22",
+      "label": "W4/W8 移动适配版",
+      "source_archive": {
+        "filename": "复赛冻结视觉曾SFT2273步-22.6-视觉AWQ-文本GPTQ-W4W8-G64..zip",
+        "sha256": "40c7a76a9c4c595ef22738382ecf0d7a038b637e81e8d509f692eb19a7f048de",
+        "bytes": 927948959
+      },
+      "language_file": "model-allint-w4w8.gguf",
+      "vision_file": "vision-allint-q8.gguf",
+      "low_bit_quantization": true,
+      "native_matrices": 237,
+      "floating_matrix_fallbacks": 1,
+      "integer_codes_preserved_in_native_matrices": true,
+      "group_mapping": "G64 split into two G32 blocks with the same scale",
+      "scale_relative_error_max": 0.0,
+      "not_bit_exact_to_bf16_compatibility": true
+    }
+  ]
+}

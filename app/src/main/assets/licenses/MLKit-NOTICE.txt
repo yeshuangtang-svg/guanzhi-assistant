@@ -1,0 +1,5 @@
+Google ML Kit Chinese Text Recognition bundled SDK 16.0.1
+Terms: https://developers.google.com/ml-kit/terms
+Data disclosure: https://developers.google.com/ml-kit/android-data-disclosure
+OCR runs on device. The SDK may collect diagnostics, application/device information and installation identifiers when connected.
+AndroidX and Google supporting libraries retain their respective license notices.

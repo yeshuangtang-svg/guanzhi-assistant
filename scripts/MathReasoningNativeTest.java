@@ -1,0 +1,3 @@
+package cn.shiguang.qwenpocket;
+import org.json.*;import java.nio.file.*;
+public class MathReasoningNativeTest {public static void main(String[] args)throws Exception{String e=NativeBridge.load("app/src/main/assets/models/model-allint-w4w8.gguf","app/src/main/assets/models/vision-allint-q8.gguf",4,false,384);if(!e.isEmpty())throw new AssertionError(e);try{JSONArray cases=new JSONArray();for(String q:new String[]{TaskExamples.get(1)[0].prompt,"三件商品分别28元、15元、7元，整单优惠10元。实付多少钱？","请计算17加25，给出结果。"})cases.put(LocalTasksNativeTest.run(TaskCatalog.prompt(1,q,""),"","",300));Files.writeString(Paths.get("build/math-reasoning-validation.json"),cases.toString(2));}finally{NativeBridge.unload();}}}
