@@ -13,4 +13,4 @@
 <text x="929" y="121" fill="#254c3c" font-size="24" font-weight="600">1.5.2</text><text x="929" y="151" fill="#658371" font-size="16">CPU 量化版</text>
 <path d="M839 187 H1080" stroke="#cfdfd5"/><text x="837" y="224" fill="#315542" font-size="20">文字 × 图片</text>
 <text x="837" y="263" fill="#315542" font-size="20">Markdown × 公式</text>
-<text x="837" y="312" fill="#698477" font-size="14">源码与文档 · 本仓库不含模型权重</text></g></svg>
+<text x="837" y="312" fill="#698477" font-size="14">源码不含权重 · 完整包见 Releases</text></g></svg>

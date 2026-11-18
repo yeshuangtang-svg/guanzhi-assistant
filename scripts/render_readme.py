@@ -24,7 +24,7 @@ hero=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewB
 <text x="929" y="121" fill="#254c3c" font-size="24" font-weight="600">1.5.2</text><text x="929" y="151" fill="#658371" font-size="16">CPU 量化版</text>
 <path d="M839 187 H1080" stroke="#cfdfd5"/><text x="837" y="224" fill="#315542" font-size="20">文字 × 图片</text>
 <text x="837" y="263" fill="#315542" font-size="20">Markdown × 公式</text>
-<text x="837" y="312" fill="#698477" font-size="14">源码与文档 · 本仓库不含模型权重</text></g></svg>'''
+<text x="837" y="312" fill="#698477" font-size="14">源码不含权重 · 完整包见 Releases</text></g></svg>'''
 flow=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410">
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#7a9e8b"/></marker></defs>
 <rect width="1200" height="410" rx="24" fill="#f2f7f4"/>

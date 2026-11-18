@@ -5,7 +5,7 @@ import re
 import subprocess
 
 root = Path(__file__).resolve().parents[1]
-top = Path(subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], cwd=root, text=True).strip())
+top = Path(subprocess.check_output(['git', 'rev-parse', '--show-toplevel'], cwd=root, text=True, encoding='utf8').strip())
 if top.resolve() != root.resolve():
     raise SystemExit('Run this check in the standalone Guanzhi repository, not a parent repository')
 names = subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode('utf8').strip('\0').split('\0')

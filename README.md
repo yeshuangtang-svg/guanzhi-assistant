@@ -6,11 +6,12 @@
 
 观知助手把文字和图片交给同一本地模型，支持看图问答、文字提取、数值分析、空间推理、代码解读和学习辅助。用户按需打开联网搜索后，由本地模型提炼检索词，应用读取公开网页，最后由本地模型结合资料总结。
 
-当前 Android 发布版本为 **1.5.2 CPU 量化版**。本仓库保存应用源码、资源、脚本和文档，**不包含模型权重、含权重的完整 APK、签名密钥或训练数据**。
+当前 Android 发布版本为 **1.5.2 CPU 量化版**。Git 源码目录保存应用代码、资源、脚本和文档，**不提交模型权重、签名密钥或训练数据**。内置量化模型的完整 APK 通过 GitHub Releases 单独分发。
 
 - [完整使用手册（Markdown）](docs/USER_GUIDE.zh-CN.md)
 - [完整使用手册（PDF）](docs/USER_GUIDE.zh-CN.pdf)
-- [下载不含模型的升级包](https://github.com/yeshuangtang-svg/guanzhi-assistant/releases/tag/v1.5.2)
+- [首次安装：下载含模型完整版（约 1.05 GB）](https://github.com/yeshuangtang-svg/guanzhi-assistant/releases/download/v1.5.2/Guanzhi-1.5.2-Lite-W4W8-arm64.apk)
+- [已有模型：下载升级包（约 4.19 MB）](https://github.com/yeshuangtang-svg/guanzhi-assistant/releases/download/v1.5.2/Guanzhi-1.5.2-Update-arm64.apk)
 - [权重发布方式](#模型权重如何发布)
 
 ## 界面与工作流程
@@ -78,7 +79,9 @@
 
 ### 首次使用
 
-不含权重的升级包不能在没有模型的手机上独立完成推理。首次安装需要由模型持有者提供量化权重后构建完整 APK，或直接提供已构建的完整 APK。本次 GitHub 上传没有分发这两种含权重内容。
+首次安装请下载 [Guanzhi-1.5.2-Lite-W4W8-arm64.apk](https://github.com/yeshuangtang-svg/guanzhi-assistant/releases/download/v1.5.2/Guanzhi-1.5.2-Lite-W4W8-arm64.apk)，内置语言和视觉量化模型，大小为 1,053,881,131 字节。升级包不含权重，不能在没有模型的手机上独立完成推理。
+
+完整 APK 的 SHA-256：`8a76581fc3699368c76abc25fd230359c059137356e099692999a231227e303c`。Release 同时提供对应 `.sha256` 文件。
 
 1. 安装含模型的完整 APK，启动应用并等待模型准备完成。
 2. 状态显示“本地运行 · CPU”后发送文字问题。
@@ -174,7 +177,7 @@ engine-version.json     固定的 llama.cpp 源码提交
 
 ## 模型权重如何发布
 
-本次提交不上传任何模型权重，以下是后续单独发布时的操作说明。
+权重不进入普通 Git 源码历史。当前 Release 已提供内置量化权重的完整 APK；以下说明适用于后续单独分发 GGUF 文件或管理权重版本。
 
 ### 方式一：GitHub Releases（本项目更适合）
 
@@ -210,4 +213,4 @@ git push origin main
 
 ## 项目与许可
 
-观知助手为独立开发项目，与千问官方无关联。基础模型及第三方组件按各自许可使用，见 [NOTICE.md](NOTICE.md) 和 `app/src/main/assets/licenses/`。本次仓库上传没有自动开放模型权重，也没有为自有源码新增开源授权；分发与使用范围由权利人明确决定。
+观知助手为独立开发项目，与千问官方无关联。基础模型及第三方组件按各自许可使用，见 [NOTICE.md](NOTICE.md) 和 `app/src/main/assets/licenses/`。完整 APK 内含的量化模型已由项目提供方授权公开分发；本次没有为自有源码新增开源许可证，第三方组件仍遵循各自许可。
